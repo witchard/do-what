@@ -1,0 +1,6 @@
+tell application "System Events"
+	set saveractivated to (exists process "ScreenSaverEngine")
+	if not saveractivated then
+		set frontApp to name of first application process whose frontmost is true
+	end if
+end tell
